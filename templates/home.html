@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Career Website</title>
+</head>
+<body>
+    <h1>Welcome to the Career Website!</h1>
+    
+    <!-- Search Bar -->
+    <form action="/" method="GET">
+        <input type="text" name="search" placeholder="Search careers...">
+        <button type="submit">Search</button>
+    </form>
+
+    <!-- Career Options -->
+    <h2>Career Options:</h2>
+    <ul>
+        <li>Doctor</li>
+        <li>Engineer</li>
+        <li>Artist</li>
+        <li>Teacher</li>
+    </ul>
+
+    <!-- Posts Section -->
+    <h2>Posts:</h2>
+    {% for post in posts %}
+        <p>{{ post }}</p>
+    {% endfor %}
+
+    <!-- Link to Add a Post -->
+    <a href="/add_post">Add a Post</a>
+</body>
+</html>
